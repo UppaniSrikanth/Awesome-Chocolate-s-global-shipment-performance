@@ -1,0 +1,76 @@
+🧭 Project Workflow Summary
+
+Here’s a snapshot of the end-to-end process followed for this project:
+
+Data Extraction (SQL):
+
+Collected sales and shipment data from multiple relational tables.
+
+Used JOIN, GROUP BY, and WHERE clauses to merge and refine datasets.
+
+Exported the cleaned dataset into CSV format for Power BI integration.
+
+Data Cleaning & Transformation (Power Query):
+
+Removed duplicates, handled null values, and corrected column data types.
+
+Created custom calculated columns such as Profit per Product and Delivery Delay Days.
+
+Renamed columns for clarity and applied proper formatting standards.
+
+Data Modeling (Power BI):
+
+Established one-to-many relationships between key tables.
+
+Built calculated measures with DAX to compute KPIs dynamically.
+
+Verified model integrity using relationship view.
+
+Dashboard Creation & Design:
+
+Applied consistent color palette (professional blue and white theme).
+
+Added clear titles and aligned visuals for readability.
+
+Designed a balanced layout with KPIs on top, trend charts in the center, and category visuals below.
+
+Storytelling & Insights Presentation:
+
+Connected the visuals logically to narrate a business story from data.
+
+Added slicers and filters for interactivity — enabling users to drill down region or product-wise.
+
+Highlighted actionable insights for business improvement.
+
+🎯 Future Improvements
+
+If extended, this project could include:
+
+Integration with Power BI Service for live dashboards and automatic refresh.
+
+Advanced DAX measures for forecasting sales trends.
+
+Python or R integration for predictive analytics (e.g., predicting future sales or shipment delays).
+
+Dynamic tooltips and bookmarks for enhanced storytelling and user experience.
+
+💬 Reflections
+
+Working on this project has been an incredible experience that strengthened my end-to-end analytical thinking.
+I realized that true data storytelling doesn’t just come from charts — it comes from understanding the why behind every number.
+
+Through this project, I practiced how a Power BI Developer or Data Analyst transforms a basic dataset into a visually rich, insight-driven dashboard that supports real business decisions.
+
+🌟 Final Thoughts
+
+This Power BI report stands as a strong demonstration of my ability to:
+
+Work through the complete data lifecycle (SQL → Cleaning → Modeling → Visualization).
+
+Use DAX measures to create dynamic and interactive reports.
+
+Apply data storytelling techniques to communicate insights clearly.
+
+📍 Project Title: Awesome Chocolates – Sales & Shipment Dashboard
+📍 Developer: Mr. Srikanth
+📍 Tech Stack: SQL | Power Query | Power BI | DAX | Data Modeling | Data Visualization
