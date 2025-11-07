@@ -91,13 +91,58 @@ Learned to design visually balanced and business-oriented dashboards.
 
 Improved ability to translate raw data into actionable insights for decision-making.
 
-📂 Repository Contents
-📁 Awesome-Chocolates-Sales-Analysis
-│
-├── 📊 PowerBI_Dashboard.png     # Final Dashboard Screenshot
-├── 🧮 SQL_Queries.sql            # Data extraction and cleaning queries
-├── 📘 README.md                  # Project documentation
-└── 📂 Data                      # Raw and cleaned data (CSV files)
+🧠 How SQL Was Used
+
+I began the project by connecting the Power BI environment to a SQL Server database that stored raw shipment data. Using SQL queries, I:
+
+Extracted shipment details from multiple related tables (Shipments, Products, Salespersons, Regions).
+
+Performed initial data cleaning—removing nulls, handling duplicates, and standardizing product names.
+
+Created aggregated tables for total sales and profit summaries by salesperson, region, and category.
+
+Exported the cleaned dataset to Power BI for visualization.
+
+Sample SQL Snippet:
+
+SELECT 
+    s.Salesperson,
+    p.ProductName,
+    r.Region,
+    SUM(s.Boxes) AS TotalBoxes,
+    SUM(s.Amount) AS TotalAmount,
+    SUM(s.Profit) AS TotalProfit
+FROM Sales s
+JOIN Product p ON s.ProductID = p.ProductID
+JOIN Region r ON s.RegionID = r.RegionID
+GROUP BY s.Salesperson, p.ProductName, r.Region
+ORDER BY TotalProfit DESC;
+
+
+This SQL backbone ensured that my Power BI dashboard had accurate and pre-cleaned data, reducing transformation workload inside Power BI.
+
+🪄 DAX Magic (In Power BI)
+
+After loading the data, I used DAX (Data Analysis Expressions) to create calculated metrics like:
+
+Total Amount = SUM(Sales[Amount])
+Total Profit = SUM(Sales[Profit])
+Profit % = DIVIDE([Total Profit], [Total Amount])
+CY Amount = CALCULATE([Total Amount], YEAR(Sales[Date]) = 2025)
+PY Amount = CALCULATE([Total Amount], YEAR(Sales[Date]) = 2024)
+Growth % = DIVIDE([CY Amount] - [PY Amount], [PY Amount])
+
+
+These formulas helped me design KPIs for sales growth, profitability, and year-over-year trends — giving the dashboard that real “corporate analytics” edge.
+
+🧾 License
+
+This project is open-sourced under the MIT License — feel free to explore, learn, and adapt the design.
+
+❤️ Acknowledgement
+
+This dashboard was crafted with deep curiosity, caffeine, and a love for turning data into stories.
+Special thanks to the entire Power BI community for inspiring endless creativity.
 
 🙌 About the Creator
 
